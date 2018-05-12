@@ -7,12 +7,12 @@ $("#magic").on("click", function() {
     $("#buttons").prepend(animButt);
 });
 
-$(".butt").on("click", function(event){
-    event.preventDefault();
-    console.log("button clicked. grabbing your gif...");
-    var search = $(this).text();
-    giphy(search);
-});
+$('#buttons').on('click', '.butt', function(event) {
+  event.preventDefault()
+  console.log('button clicked. grabbing your gif...')
+  var search = $(this).text()
+  giphy(search)
+})
 
 function giphy(search){
     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=p0cSic3YEDtZWHwUdV9Jvy6w6PKRN2mt&tag=" + search;
